@@ -5,20 +5,20 @@
 class Coppeno < Formula
   desc "coppeno"
   homepage "https://github.com/webcyou-org/coppeno"
-  version "0.5.4"
+  version "0.5.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.4/coppeno_darwin_x86_64.tar.gz"
-      sha256 "ecd8e16e9988722141851055c53a49e1e93a06bd0807bc06d472040d9acfeb29"
+    if Hardware::CPU.arm?
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.5/coppeno_darwin_arm64.tar.gz"
+      sha256 "8afbb4f68c730b896ce277138fa37270ed894a54bd52092e2e13cfe2ae7d7111"
 
       def install
         bin.install "coppeno"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.4/coppeno_darwin_arm64.tar.gz"
-      sha256 "a96f430364f140cce8e73ab07102c707212c434bf4d8f370bb9d578c8f581729"
+    if Hardware::CPU.intel?
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.5/coppeno_darwin_x86_64.tar.gz"
+      sha256 "4fd117a74f71ed7ef178c476a4d0393ecd1833f23a5e17d1ecabaf0ba39db289"
 
       def install
         bin.install "coppeno"
@@ -27,17 +27,17 @@ class Coppeno < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.4/coppeno_linux_arm64.tar.gz"
-      sha256 "1b39575fc727226de24f555b604f495af53d110c727c07ceb04a5a969c9d8d5d"
+    if Hardware::CPU.intel?
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.5/coppeno_linux_x86_64.tar.gz"
+      sha256 "db979d923d80d57fb412aad57a9f90b8f51dc176d06a8d99bce26107b61c672d"
 
       def install
         bin.install "coppeno"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.4/coppeno_linux_x86_64.tar.gz"
-      sha256 "06657131556d8d51d0950e224846a251ebae5374aef1ad959c1f5ada78fb064a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.5.5/coppeno_linux_arm64.tar.gz"
+      sha256 "41ab41bf9a868d4437991eec94ed38bddfeefd2bed5728dfd3239584cdf1bbdc"
 
       def install
         bin.install "coppeno"
