@@ -5,20 +5,20 @@
 class Coppeno < Formula
   desc "coppeno"
   homepage "https://github.com/webcyou-org/coppeno"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.6.0/coppeno_darwin_x86_64.tar.gz"
-      sha256 "dbb4d7d3edc49b4c2ebfa0fe4fac5af3347e1f9464746139a480ad8d7e47d049"
+    if Hardware::CPU.arm?
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.0/coppeno_darwin_arm64.tar.gz"
+      sha256 "1e1be6a9b659275b51de6bd0add529d5cd7246ae91fa70757bb6bf050f68c5cf"
 
       def install
         bin.install "coppeno"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.6.0/coppeno_darwin_arm64.tar.gz"
-      sha256 "5afada7a6a34f11f8095acaf254d6af1de1008cb12f4f779ce239895bf1cdc20"
+    if Hardware::CPU.intel?
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.0/coppeno_darwin_x86_64.tar.gz"
+      sha256 "73ec67ffb27b0bc0c23a6ecfee4e3f2a0c20cfb293af4a35bba90df0ae55f767"
 
       def install
         bin.install "coppeno"
@@ -28,16 +28,16 @@ class Coppeno < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.6.0/coppeno_linux_x86_64.tar.gz"
-      sha256 "93321508acd25b3b0092813dba558b8b95dfe6e6f60df07ef3e560fbb79d4bad"
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.0/coppeno_linux_x86_64.tar.gz"
+      sha256 "5c27875fa522786a2b15ba873cccf458af9d68c0c037d638e2c0f73e4c530d61"
 
       def install
         bin.install "coppeno"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.6.0/coppeno_linux_arm64.tar.gz"
-      sha256 "89e4d98e5ab1aaaefb38621fd75c1856cfe93e6ffd124025cd0b139573f74f61"
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.0/coppeno_linux_arm64.tar.gz"
+      sha256 "754f862a34e331d8034d90696787a8071f4113e99b4ca9584cee51d3e81d603f"
 
       def install
         bin.install "coppeno"
