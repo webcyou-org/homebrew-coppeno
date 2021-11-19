@@ -5,20 +5,20 @@
 class Coppeno < Formula
   desc "coppeno"
   homepage "https://github.com/webcyou-org/coppeno"
-  version "0.7.1"
+  version "0.7.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.1/coppeno_darwin_arm64.tar.gz"
-      sha256 "e96ed7fd9aa5e2971af0c4038a1126dbf7f42e2005b2e23f76ce784ce1ceaf55"
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.2/coppeno_darwin_arm64.tar.gz"
+      sha256 "90386f872d5fed6dce1e7db74d611d01f12655e8c470f045133d047bff9e2691"
 
       def install
         bin.install "coppeno"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.1/coppeno_darwin_x86_64.tar.gz"
-      sha256 "7fa6e4e4b6af69ae9ba725c2b86691fdff8f442b655be1a6822db754359ba906"
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.2/coppeno_darwin_x86_64.tar.gz"
+      sha256 "3309a7d6979ebdcaec980c3662b4e9687c436e729b83c15d9a2fed0dfe786276"
 
       def install
         bin.install "coppeno"
@@ -28,16 +28,16 @@ class Coppeno < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.1/coppeno_linux_arm64.tar.gz"
-      sha256 "c8c8b2e4585461090bd21e2c5b64f7026c1ef12a98fa6c3156ff71f1fc66e3eb"
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.2/coppeno_linux_arm64.tar.gz"
+      sha256 "0510dcefc4112884474de47d4cf902e169b30cec7dab36d7178f7eac2761e1a3"
 
       def install
         bin.install "coppeno"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.1/coppeno_linux_x86_64.tar.gz"
-      sha256 "462e0fe91722f61f603d80219cd279870cfdc38538bc5d8af6e1d4ecde81a590"
+      url "https://github.com/webcyou-org/coppeno/releases/download/v0.7.2/coppeno_linux_x86_64.tar.gz"
+      sha256 "be38a9e4a5935fe06f0f947b9e6f38aa9662e38abe09116a5d81d66032eb1f55"
 
       def install
         bin.install "coppeno"
